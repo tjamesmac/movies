@@ -5,12 +5,6 @@ const PORT = process.env.PORT || 8080;
 const movies = require('../movies.json');
 const helpers = require('./helpers');
 
-
-const testDate = helpers.formatDate(1294012800);
-console.log(testDate);
-
-
-
 app.get('/', (req, res) => res.send('Hello world'));
 
 app.get('/healthcheck', (req, res) => {
@@ -21,7 +15,10 @@ app.get('/healthcheck', (req, res) => {
 app.get('/movies', (req, res) => {
   res.send(movies);
 })
-
+app.get('/movies/report', (req, res) => {
+  const report = helpers.createReport(movies.movies);
+  res.send(report);
+})
 app.get('/movies/:id', (req, res) => {
   const { id } = req.params;
   const movieID = id - 1;
