@@ -28,10 +28,11 @@ app.get('/movies/:id', (req, res) => {
   if (movieID >= 0) {
     const targetMovie = movies.movies[movieID];
     let targetMovieComments = movies.movies[0].comments;
-    for (const comment of targetMovieComments) {
-    comment.dateCreated = helpers.formatDate(parseInt(comment.dateCreated));
-    }
-    res.send(movies.movies[movieID]);
+    const formatCommentsDate = targetMovieComments.map((comment, index) => {
+      comment.dateCreated = helpers.formatDate(parseInt(comment.dateCreated));
+      return comment;
+    })
+    res.send(targetMovie);
   } else {
     res.send({ "error": "No movie found"})
   }
