@@ -2,12 +2,31 @@ const express = require('express');
 const app = express();
 const dotenv = require('dotenv').config();
 const PORT = process.env.PORT || 8080;
+const movies = require('../movies.json');
+const helpers = require('./helpers');
+
+
+helpers.formatDate();
 
 app.get('/', (req, res) => res.send('Hello world'));
 
 app.get('/healthcheck', (req, res) => {
   const status = { "status": "UP" };
   res.send(status)
+})
+
+app.get('/movies', (req, res) => {
+  res.send(movies);
+})
+
+app.get('/movies/:id', (req, res) => {
+  const { id } = req.params;
+  const movieID = id - 1;
+  if (movieID >= 0) {
+    res.send(movies.movies[movieID]);
+  } else {
+    res.send({ "error": "No movie found"})
+  }
 })
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
