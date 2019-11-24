@@ -16,9 +16,9 @@ npm start
   Returns json data about a single user.
 
 **URL**
-
+```
   /healthcheck
-
+```
 **Method:**
 
 `GET`
@@ -32,9 +32,9 @@ npm start
   Returns json data about all movies.
 
 **URL**
-
+```
   /movies
-
+```
 **Method:**
 
 `GET`
@@ -48,9 +48,9 @@ npm start
   Returns json data about a single movie.
 
 **URL**
-
+```
   /movies/:id
-
+```
 **Method:**
 
 `GET`
@@ -113,9 +113,9 @@ npm start
   Returns json containing report data
 
 **URL**
-
+```
   /movies/report
-
+```
 **Method:**
 
 `GET`
