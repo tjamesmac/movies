@@ -1,5 +1,5 @@
 # Movies
-
+----
 ## Project setup
 ### Install necessary dependencies
 ```
@@ -11,12 +11,12 @@ npm start
 ```
 
 ## API Endpoints
-
-### HealthCheck
 ----
+### HealthCheck
+
   Returns json data about a single user.
 
-**URL**
+#### URL
 ```
   /healthcheck
 ```
@@ -28,7 +28,7 @@ npm start
   **Code:** 200 <br />
   **Content:** `{ status: "UP" }`
 
-**Movies**
+### All Movies
 ----
   Returns json data about all movies.
 
@@ -44,25 +44,25 @@ npm start
 
   **Code:** 200 <br />
 
-**Single movie**
+### Single movie
 ----
   Returns json data about a single movie.
 
-**URL**
+#### URL
 ```
   /movies/:id
 ```
-**Method:**
+#### Method:
 
 `GET`
   
-**URL Params**
+#### URL Params
 
   **Required:**
  
   `id=[integer]`
 
-**Success Response:**
+#### Success Response:
 
   **Code:** 200 <br />
   **Content:** 
@@ -104,24 +104,24 @@ npm start
         ]
      }
   ```
-* **Error Response:**
+**Error Response:**
 
-  * **Code:** 404 NOT FOUND <br />
-    **Content:** `{ "error": "No movie found" }`
+  **Code:** 404 NOT FOUND <br />
+  **Content:** `{ "error": "No movie found" }`
 
-**Report**
+### Report
 ----
   Returns json containing report data
 
-**URL**
+#### URL
 ```
   /movies/report
 ```
-**Method:**
+#### Method:
 
 `GET`
 
-**Success Response:**
+#### Success Response:
 
   **Code:** 200 <br />
   **Content:**
