@@ -71,42 +71,42 @@ GET
   ##### Code: 200 <br />
   ##### Content:
   ```json
+{
+  "movie_id": 5,
+  "title": "Jaws",
+  "description": "A giant great white shark arrives on the shores of a New England beach resort and wreaks havoc with bloody attacks on swimmers, until a local sheriff teams up with a marine biologist and an old seafarer to hunt the monster down.",
+  "producer": "Universal Pictures",
+  "available_in_3d": false,
+  "age_rating": "PG",
+  "oscar_nominations": 18,
+  "likes": 1000,
+  "comments": [
     {
-        "movie_id":5,
-        "title":"Jaws",
-        "description":"A giant great white shark arrives on the shores of a New England beach resort and wreaks havoc with bloody attacks on swimmers, until a local sheriff teams up with a marine biologist and an old seafarer to hunt the monster down.",
-        "producer":"Universal Pictures",
-        "available_in_3d" : false,
-        "age_rating":"PG",
-        "oscar_nominations":18,
-        "likes":1000,
-        "comments":[
-           {
-              "user":"Alison",
-              "message":"This is amazing .....",
-              "dateCreated":"1380240000",
-              "like":10
-           },
-           {
-              "user":"testingPriest",
-              "message":"Killer shark! What's not to like",
-              "dateCreated":"1347321600",
-              "like":9
-           },
-           {
-              "user":"David",
-              "message":"It was OK to pass the time away",
-              "dateCreated":"1420070400",
-              "like":5
-           },
-           {
-              "user":"Jones",
-              "message":"Scary, I wished I had bought a different movie",
-              "dateCreated":"1486252800",
-              "like":1
-           }
-        ]
-     }
+      "user": "Alison",
+      "message": "This is amazing .....",
+      "dateCreated": "2013-09-27",
+      "like": 10
+    },
+    {
+      "user": "testingPriest",
+      "message": "Killer shark! What's not to like",
+      "dateCreated": "2012-09-11",
+      "like": 9
+    },
+    {
+      "user": "David",
+      "message": "It was OK to pass the time away",
+      "dateCreated": "2015-01-01",
+      "like": 5
+    },
+    {
+      "user": "Jones",
+      "message": "Scary, I wished I had bought a different movie",
+      "dateCreated": "2017-02-05",
+      "like": 1
+    }
+  ]
+}
   ```
 #### Error Response:
 
