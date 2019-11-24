@@ -6,7 +6,6 @@ const controller = module.exports = {
     const { id } = req.params;
     const movieID = id - 1;
     const amountOfMovies = movies.movies.length;
-    console.log(movieID, amountOfMovies);
     if (movieID >= 0 && movieID > amountOfMovies) {
       console.log("oh no")
       // make a new object without same reference
