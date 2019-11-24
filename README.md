@@ -9,8 +9,8 @@ npm install
 npm start
 ```
 
-## API Endpoints
-### HealthCheck
+# API Endpoints
+## HealthCheck
 
   Returns json data about a single user.
 
@@ -28,7 +28,7 @@ GET
   **Code:** 200 <br />
   **Content:** `{ status: "UP" }`
 
-### All Movies
+## All Movies
 ----
   Returns json data about all movies.
 
@@ -36,7 +36,7 @@ GET
 ```
   /movies
 ```
-####Method:
+#### Method:
 
 ```
 GET
@@ -46,7 +46,7 @@ GET
 
   **Code:** 200 <br />
 
-### Single movie
+## Single movie
 
   Returns json data about a single movie.
 
@@ -113,7 +113,7 @@ GET
   **Code:** 404 NOT FOUND <br />
   **Content:** `{ "error": "No movie found" }`
 
-### Report
+## Report
 ----
   Returns json containing report data
 
