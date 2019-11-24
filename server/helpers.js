@@ -10,7 +10,7 @@ const self = module.exports = {
         ++count
       }
     }
-    console.log(count);
+
     return count;
   },
   getMostUserComments: (movies) => {
@@ -28,14 +28,12 @@ const self = module.exports = {
     const mostComments = Object.keys(userCommentCount).reduce((a, b) => {
       return userCommentCount[a] > userCommentCount[b] ? a : b;
     })
-    console.log(mostComments);
     return mostComments;
   },
   getHighestOscarsNoms: (movies) => {
     const oscarNominations = movies.map((movie, index) => {
       return movie.oscar_nominations;
     })
-    console.log(Math.max(...oscarNominations));
     return Math.max(...oscarNominations);
   },
   getRecentComments: (movies) => {
@@ -52,7 +50,6 @@ const self = module.exports = {
       comment.dateCreated = self.formatDate(parseInt(comment.dateCreated));
       return comment;
     })
-    console.log(formatCommentDate);
     return formatCommentDate;
   },
   createReport: (movies) => {
