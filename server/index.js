@@ -1,8 +1,8 @@
 const express = require('express');
-const app = express();
-const dotenv = require('dotenv').config();
-const PORT = process.env.PORT || 8080;
 const helpers = require('./helpers');
+const dotenv = require('dotenv').config();
+const app = express();
+const PORT = process.env.PORT || 8080;
 
 const healthCheck = require('./routes/healthCheck/healthCheck.route');
 const individualMovie = require('./routes/individualMovie/individualMovie.route');
