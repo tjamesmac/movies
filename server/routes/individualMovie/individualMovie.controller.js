@@ -5,11 +5,17 @@ const controller = module.exports = {
   getIndividualMovie: (req, res) => {
     const { id } = req.params;
     const movieID = id - 1;
-    if (movieID >= 0) {
-      const targetMovie = movies.movies[movieID];
-      let targetMovieComments = movies.movies[0].comments;
+    const amountOfMovies = movies.movies.length;
+    console.log(movieID, amountOfMovies);
+    if (movieID >= 0 && movieID > amountOfMovies) {
+      console.log("oh no")
+      // make a new object without same reference
+      const targetMovie = JSON.parse(JSON.stringify(movies.movies[movieID]));
+      let targetMovieComments = targetMovie.comments;
+
       const formatCommentsDate = targetMovieComments.map((comment, index) => {
-        comment.dateCreated = helpers.formatDate(parseInt(comment.dateCreated));
+        const getDate = helpers.formatDate(parseInt(comment.dateCreated));
+        comment.dateCreated = getDate;
         return comment;
       })
       res.send(targetMovie);
