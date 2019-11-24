@@ -29,7 +29,7 @@ GET
   **Content:** `{ status: "UP" }`
 
 ## All Movies
-----
+
   Returns json data about all movies.
 
 #### URL
@@ -114,7 +114,6 @@ GET
   **Content:** `{ "error": "No movie found" }`
 
 ## Report
-----
   Returns json containing report data
 
 #### URL
