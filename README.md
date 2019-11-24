@@ -1,6 +1,7 @@
-# movies
+# Movies
 
 ## Project setup
+### Install necessary dependencies
 ```
 npm install
 ```
@@ -9,9 +10,9 @@ npm install
 npm start
 ```
 
-# API Endpoints
+## API Endpoints
 
-**HealthCheck**
+### HealthCheck
 ----
   Returns json data about a single user.
 
