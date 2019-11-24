@@ -6,8 +6,10 @@ const controller = module.exports = {
     const { id } = req.params;
     const movieID = id - 1;
     const amountOfMovies = movies.movies.length;
-    if (movieID >= 0 && movieID > amountOfMovies) {
+    
+    if (movieID >= 0 && movieID < amountOfMovies) {
       console.log("oh no")
+      console.log(movieID);
       // make a new object without same reference
       const targetMovie = JSON.parse(JSON.stringify(movies.movies[movieID]));
       let targetMovieComments = targetMovie.comments;
